@@ -1,6 +1,5 @@
 import os
 from flask import Flask, render_template
-from flask.json import jsonify
 
 jam = Flask(__name__)
 
