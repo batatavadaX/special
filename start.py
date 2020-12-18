@@ -1,6 +1,6 @@
 import sys
 import variables
-sys.path.insert(1, 'Mutation')
+sys.path.insert(1, 'mutation')
 from music import jam
 
 if __name__ == "__main__":
