@@ -38,3 +38,5 @@ chmod 777 bin/nginx -p . -c ../nginx.conf
 
 chmod 777 start.py 
 python start.py
+
+exit 0
