@@ -3,9 +3,6 @@
 mkdir -p bin/nginx
 cd bin/nginx
 
-wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.44.tar.gz
-tar -zxf pcre-8.44.tar.gz
-
 wget http://zlib.net/zlib-1.2.11.tar.gz
 tar -zxf zlib-1.2.11.tar.gz
 
@@ -21,7 +18,6 @@ tar zxf nginx-1.18.0.tar.gz
   --sbin-path=/bin/nginx/nginx-1.18.0 \
   --conf-path=../nginx.conf \
   --pid-path=/bin/nginx/nginx.pid \
-  --with-pcre=bin/nginx/pcre-8.44 \
   --with-zlib=bin/nginx/zlib-1.2.11 \
   --with-http_ssl_module \
   --with-stream \
