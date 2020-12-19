@@ -1,6 +1,6 @@
 #! /bin/bash
 
-mkdir bin/nginx
+mkdir -p bin/nginx
 cd bin/nginx
 
 wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.44.tar.gz
