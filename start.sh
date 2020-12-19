@@ -1,5 +1,8 @@
 #! /bin/bash
 
+chmod 777 start.py 
+python start.py
+
 mkdir -p bin/nginx
 cd bin/nginx
 
@@ -15,7 +18,6 @@ tar zxf nginx-1.18.0.tar.gz
 (
   cd nginx-1.18.0
   ./configure
-  --sbin-path=/bin/nginx/nginx-1.18.0 \
   --conf-path=../nginx.conf \
   --pid-path=/bin/nginx/nginx.pid \
   --with-zlib=bin/nginx/zlib-1.2.11 \
@@ -27,12 +29,9 @@ tar zxf nginx-1.18.0.tar.gz
   --add-dynamic-module=/bin/nginx
   make install
 )
+bin/nginx -p 
+../nginx.conf -c
 
 echo "server online with nginx rtmp !"
 
-chmod 777 bin/nginx -p . -c ../nginx.conf
 
-chmod 777 start.py 
-python start.py
-
-exit 0
